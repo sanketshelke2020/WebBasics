@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output Tag</title>
+</head>
+<body>
+    <form action="">
+        <label>Enter first No:</label><input type="number" id="n1" >
+        <label>Enter second No:</label><input type="number" id="n2" onkeydown="op.value=n1.value+n2.value">
+    </form>
+    <output id="op"></output>
+
+    <form action="" oninput="if(nn1.value=='')nn1.value='0';if(nn2.value=='')nn2.value='0';
+    op1.value=parseFloat(nn1.value)+ parseFloat(nn2.value)
+    ">
+        <label>Enter first No:</label><input type="number" id="nn1" >
+        <label>Enter second No:</label><input type="number" id="nn2">
+    </form>
+    <output id="op1"></output>
+
+</body>
+</html>
