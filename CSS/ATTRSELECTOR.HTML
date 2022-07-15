@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        [type='email']{
+            border-radius: 20rem;
+            height: 2rem;
+            width: 20rem;
+        }
+        [type="submit"]{
+            height: 20px;
+            width: 60px;
+            background-color: aqua;
+            
+        }
+        [for]{
+            font-size: 2rem;
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form action="success.html">
+    <table>
+        <tbody>
+            <tr>
+                <td><label for="fname">Firstname :</label></td>
+                <td><input type="text" required placeholder="Enter Firstname" id="fname"></td>
+            </tr>
+            <tr>
+                <td><label for="lname">Lastname :</label></td>
+                <td><input type="text" placeholder="Enter Lastname" id="lname"></td>
+            </tr>
+            <tr>
+                <td><label for="cname">CompanyNamef :</label></td>
+                <td><input type="text" value="Neosoft" id="cname"></td>
+            </tr>
+            <tr>
+                <td><label for="loc">Location :</label></td>
+                <td><input type="text" value="Rabale" id="loc" readonly></td>
+            </tr>
+            <tr>
+                <td><label for="uname" >Username:</label></td>
+                <td><input type="text" minlength="3" maxlength="10" id="unmae"></td>
+            </tr>
+            <tr>
+                <td><label for="email" >Email:</label></td>
+                <td><input type="email"  id="email"></td>
+            </tr>
+            <tr>
+                <td><label for="pass">Password:</label></td>
+                <td><input type="password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}" id="pass"></td>
+            </tr>
+            <tr>
+                <td><label for="cpass">Confirm Password:</label></td>
+                <td><input type="password"  id="cpass"></td>
+            </tr>
+            <tr>
+                <td><label for="age" >Age:</label></td>
+                <td><input type="number" min="20" max="40" id="age"></td>
+            </tr>
+            <tr>
+                <td><label for="contact" >Contact:</label></td>
+                <td><input type="tel" pattern="[0-9]{10}"  id="contact"></td>
+            </tr>
+            <tr>
+                <td><label for="birth">BirthDate:</label></td>
+                <td><input type="datetime-local"  id="birth"></td>
+            </tr>
+           
+            <tr>
+                <td><label><input type="checkbox" name="course" value="jv">:Java</label></td>
+                <td><label><input type="checkbox" name="course" value="py">:Python</label></td>
+                <td><label><input type="checkbox" name="course" value="js">:Javascript</label></td>
+                <td><label><input type="checkbox" name="course" value="c">:C++</label></td>
+                
+            </tr>
+            <tr>
+                <td><label><input type="radio" name="gender" value="male">Male</label></td>
+                <td><label><input type="radio" name="gender" value="female">FeMale</label></td>
+            </tr>
+            <tr>
+                <td><label for="jm">Joining Month:</label></td>
+                <td><input type="month"  id="jm"></td>
+            </tr>
+            <tr>
+                <td><input type="color" name="color" id="pallete"></td>
+            </tr>
+            <tr>
+                <td><label>Address</label></td>
+                <td><textarea name="add" id="addr" cols="30" rows="10"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="">Select Location</label></td>
+                <td><select name="loc" id="loccc" multiple>
+                    <option value="rabale">Rabale</option>
+                    <option value="dadar">Dadar</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><input type="submit" ></td>
+                <td><input type="reset"></td>
+                <td><input type="image" src="Images/apple.png"></td>
+                <td><button>Submit</button></td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+
+</body>
+</html>
