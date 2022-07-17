@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropDown With OptGroup</title>
+</head>
+<body>
+    <h2>Select Course</h2>
+    <form action="">
+    <select name="course" id="cou">
+        <optgroup label="Languages">
+            <option value="Python">Python</option>
+            <option value="c++">C++</option>
+            <option value="java">Java</option>
+        </optgroup>
+        <optgroup label="FrameWorks">
+            <option value="django">Django</option>
+            <option value=".net">.NET</option>
+            <option value="Angular" disabled>Angular</option>
+            <option value="React">React</option>
+        </optgroup>
+    </select>
+    <input type="submit" value="Select">
+</form>
+</body>
+</html>

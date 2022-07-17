@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canver</title>
+</head>
+<body>
+    <section>
+        <h2>Canvas</h2>
+        <canvas id="can" height="500" width="500" style="border: 1px solid black;">
+
+        </canvas>
+    </section>
+
+    <script>
+        let cnavasNode = document.getElementById("can")
+        let ctx = cnavasNode.getContext("2d");
+
+        ctx.moveTo(50,50);
+        ctx.lineTo(100,200);
+        ctx.stroke();
+
+        ctx.font = "20px Arial"
+        ctx.strokeText("Hello",100,100)
+
+        ctx.beginPath();
+        ctx.arc(250,250,70,0,Math.PI*2,false)
+        ctx.stroke();
+
+        // ctx.beginPath();
+        let apple = new Image()
+        apple.src = 'https://toppng.com/uploads/preview/i-am-11551053494c5g5us2lhz.png'; 
+        ctx.drawImage(apple,50,50)
+        // ctx.stroke();
+    </script>
+</body>
+</html>
