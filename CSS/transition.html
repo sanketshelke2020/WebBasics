@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        div{
+            height: 600px;
+        }
+        .block1{
+            background-color: rgb(228, 142, 142);
+        }
+        .block1:hover{
+            height: 50px;
+            transition-duration: 2s;
+            background-color: rgb(250, 0, 0);
+            transition-delay: 0.5s;
+            transition-timing-function: ease-out;
+            /* transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); */
+        }
+    </style>
+</head>
+<body>
+    <div class="block1">  </div>
+    <div class="block2">  </div>
+</body>
+</html>
