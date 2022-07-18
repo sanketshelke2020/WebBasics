@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datalist</title>
+    <style>
+        div{
+            height: 300px;
+        }
+        .div1{
+            background-image: repeating-radial-gradient(red,yellow 70%,green );
+        }
+        .div2{
+            background-image: repeating-radial-gradient(red,yellow 10%);
+        }
+        .div3{
+            background-image: repeating-radial-gradient(circle at 10%,red 10%,yellow);
+        }
+        .div4{
+            background-image: repeating-radial-gradient(circle at 0,red,yellow,green);
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <label for="">Select Color:</label>
+    <input list="colors" id="color" name="color">
+
+    <datalist id="colors">
+        <option value="red">
+        <option value="greem">
+        <option value="yellow">
+        <option value="Pink">
+    </datalist>
+
+    <hr>
+
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+    <div class="div4"></div>
+</body>
+</html>
