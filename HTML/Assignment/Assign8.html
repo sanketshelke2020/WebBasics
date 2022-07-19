@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Image</title>
+    <style>
+        
+        div{
+            height: 200px;
+            border: 30px solid black;
+        }
+        .block0{
+            border-image: linear-gradient(red,green) 20;
+        }
+        .block1{
+            border-image-source: url(../Images/maria-teneva-UzQ5VR2FSfQ-unsplash.jpg);
+            border-image-slice: 4;
+            border-image-width: 10px;
+            border-image-outset: -20px;
+            border-image-repeat:stretch;
+        }
+
+        .block2{
+            border-image: url(../Images/download.png)  40 100 /20px/5px round;
+        }
+        .block3{
+            border-image: url(../Images/apple.png) 50 100 / 50px 30px/ 20px round space;
+        }
+    </style>
+</head>
+<body>
+    <div class="block0"></div>
+    <div class="block1"></div>
+    <div class="block2"></div>
+    <div class="block3"></div>
+</body>
+</html>
