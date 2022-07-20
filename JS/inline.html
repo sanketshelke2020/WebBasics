@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inline Js</title>
+</head>
+<body>
+  <form action="" onsubmit="event.preventDefault();uname.value= myname.value.toUpperCase();">
+    <label for="">Enter Name:</label>
+    <input type="text" id="myname">
+    <input type="submit" value="Convert">
+  </form>
+
+  <p>Your Name is : <output id="uname"></output></p>
+
+
+  <div>
+    <label for="">Enter Name:</label>
+    <input type="text" id="mmyname">
+    <button onclick="uname.value = mmyname.value.toUpperCase();">Convert</button>
+  </div>
+</body>
+</html>
