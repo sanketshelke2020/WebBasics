@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psudo</title>
+
+    <style>
+        input[type='radio']:checked{
+            outline: 1px solid red;
+        }
+
+        input:disabled{
+            background-color:pink;
+            border: none;
+        }
+
+        input:empty{
+            border-bottom: 1px solid orange;
+        }
+
+        input:invalid{
+            background-color: red;
+        }
+
+        input:read-only{
+            /* background-color: rgb(134, 224, 134); */
+            border-top: 2px solid yellow;
+        }
+
+        :root{
+            background-color: #f4f4f4;
+        }
+        
+
+        li::marker{
+            content: '(:)';
+        }
+        input:not([type="text"]){
+            border-width: 5px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <form action="">
+        <label for="">Male:<input type="radio" name="gender" id="male" value="Male"></label>
+        <label for="">FeMale:<input type="radio" name="gender" id="male" value="FeMale" ></label>
+        <br>
+        <input type="text" placeholder="FirstName" disabled> 
+        <input type="text" placeholder="LastName" disabled> 
+<br>
+        <input type="email" placeholder="Email" > 
+        
+        <label for="">Location:</label>
+        <input value="Rabale" readonly>
+    </form>
+    <ul>
+        <li>Mango</li>
+        <li>Mango</li>
+        <li>Mango</li>
+        <li>Mango</li>
+    </ul>
+</body>
+</html>
