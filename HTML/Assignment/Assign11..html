@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 11</title>
+</head>
+<body>
+  
+
+  <script>
+    let names = ['Hari', 'Pari', 'Karishma', 'Sai', 'Subodh', 'Suman', 'santosh', 'Kishori']
+
+    console.log(names.filter(ele => ele.endsWith('ri')))
+    console.log(names.filter(ele => ele.endsWith('i')))
+    console.log(names.filter(ele => ele.toUpperCase().startsWith('S')))
+    console.log(names.filter(ele => ele.toUpperCase().startsWith('SU')))
+
+    let snames = ['Rupa','   rupa','rupa  ','RUPA',"RUPALI"]
+    console.log(snames);
+
+
+    console.log(snames.filter(ele=>ele.trim().toUpperCase() === "RUPA"));
+
+    console.log(snames.slice(3))
+    console.log(snames.slice(-3, 4))
+    console.log(snames.slice(1,4))
+
+    //StringAPI
+
+    let str1 = "Welcome to WebBasics Training Program";
+
+    console.log(str1.startsWith('s'))
+    console.log(str1.endsWith('m'))
+    console.log(str1.slice(5,10,))
+    console.log(str1.lastIndexOf('r'))
+
+
+    
+
+
+  </script>
+</body>
+</html>
