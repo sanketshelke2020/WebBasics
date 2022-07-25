@@ -6,6 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lot of things</title>
 </head>
+
+<style>
+  #imgSlide{
+  }
+</style>
+
+
 <body>
   <section id="removeChild">
   <h2>Remove child fun</h2>
@@ -21,8 +28,10 @@
       <label>C:<input type="checkbox" name="chk1" id="ch1" value="c"></label>
       <label>.Net:<input type="checkbox" name="chk1" id="ch1" value="net"></label>
     </div>
-    
-    
+  </section>
+
+  <section>
+    <img id="imgSlide" src="../Images/maria-teneva-UzQ5VR2FSfQ-unsplash.jpg" alt="" height="500px" width="100%">
   </section>
 
   <script>
@@ -50,9 +59,26 @@
         }  
         chkBox.append(uoList)
         
-
        })
     })
+
+    //ImageSlide
+
+    let imgNode = document.getElementById("imgSlide")
+    srcArray = ['../Images/maria-teneva-UzQ5VR2FSfQ-unsplash.jpg','../Images/apple.png',"../Images/download.png"]
+    let indx = 0;
+    function chgImg(){
+      if(indx>2){
+        indx =  0;
+      }
+      imgNode.src = srcArray[indx++]
+
+    }
+
+    setInterval(()=>{
+      chgImg();
+    },1000)
+    
     
   </script>
 
