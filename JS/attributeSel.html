@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attribute Selecter</title>
+  <style>
+    .scaler{
+      transform: scale(2);
+    }
+
+    #img1{
+      height: 300px;
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Hello</h2>
+
+  <img id="img1" src="../HTML/Images/maria-teneva-UzQ5VR2FSfQ-unsplash.jpg"  alt="">
+  <button onclick="zoom()">Zoom</button>
+  <script>
+    let img1 = document.getElementById('img1')
+    function zoom(){
+      // console.log(img1);
+      // img1.height = img1.height+20;
+      // img1.width = img1.width+20;
+      console.log(typeof img1.id);
+
+    }
+
+    img1.addEventListener('mouseover',()=>{
+      // img1.style.transform = "scale(2)";
+      img1.classList.toggle('scaler')
+    })
+
+
+
+  </script>
+</body>
+</html>

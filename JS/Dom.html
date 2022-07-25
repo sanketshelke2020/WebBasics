@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom</title>
+  <style>
+    .bo{
+      border: 1px solid blueviolet;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="hel" class="india">Hello</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, ratione?</p>
+  <p class="india">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, ratione?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, ratione?</p>
+  <p class="india">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, -ratione?</p>
+  <p class="india">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, -ratione?</p>
+
+  <script>
+    let node1 = document.getElementById('hel');
+    node1.setAttribute('style',"color:red")
+    node1.setAttribute('class','bo')
+    let node2 = document.getElementsByClassName('india');
+    console.log(node2);
+    for(let node of node2){
+      node.setAttribute('style',"color: yellow")
+      // node.setAttribute('class','bo')
+      node.classList.add('bo')
+      // node.className = 'bo'
+    }
+
+    
+  </script>
+
+</body>
+</html>

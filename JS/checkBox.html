@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CheckBoxDemo</title>
+</head>
+<body>
+  <label>Java: <input type="checkbox" name="ch1" id="ch1" value="java"></label>
+  <label>Python: <input type="checkbox" name="ch2" id="ch1" value="python"></label>
+  <label>C: <input type="checkbox" name="ch1" id="ch3" value="c"></label>
+  <label>Rubby: <input type="checkbox" name="ch1" id="ch4" value="Rubby"></label>
+  
+  <script>
+    
+    document.getElementsByName("ch1").forEach(element => {
+      element.addEventListener('onchecked',console.log("checked"))
+      
+    });
+
+  </script>
+
+</body>
+</html>

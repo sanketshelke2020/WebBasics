@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+  </head>
+
+<style>
+  :valid{
+    border: 1px solid green;
+  }
+  :invalid{
+    border: 1px solid red;
+  }
+</style>
+
+  <body>
+    <section>
+      <h1>Registration Form</h1>
+      <form action="Success.html" novalidate>
+        <!-- text field-->
+
+        <table>
+          <tr>
+            <td><label for="fname">First Name:</label></td>
+            <td>
+              <input id="fname" name="myName" pattern="[A-Za-z]*" required onblur="validate1()"/>
+            </td>
+            <td id="error0"></td>
+          </tr>
+          <tr>
+            <td><label for="age">Age: </label></td>
+            <td><input type="number" id="age" min="20" max="60" required onblur="validate2()"/></td>
+            <td id="error1"></td>
+          </tr>
+          <tr>
+            <td><label for="contact">Mobile Number: </label></td>
+            <td>
+              <input id="contact" pattern="[0-9]{10}" required type="tel" onblur="validate3()"/>
+            </td>
+            <td id="error2"></td>
+          </tr>
+          <tr>
+            <td><label for="mail">Email Id: </label></td>
+            <td><input type="email" id="mail" required onblur="validate4()" /></td>
+            <td id="error3"></td>
+          </tr>
+          <tr>
+            <td><label for="uname">Set Username: </label></td>
+            <td>
+              <input
+                type="text"
+                id="uname"
+                minlength="3"
+                maxlength="10"
+                required
+                onblur="validate5()"
+              />
+            </td>
+            <td id="error4"></td>
+          </tr>
+          <tr>
+            <td><label for="pass">Set Password: </label></td>
+            <td>
+              <input
+                type="text"
+                id="pass"
+                pattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}"
+                onblur="validate6()"
+              />
+            </td>
+            <td id="error5"></td>
+          </tr>
+          <tr>
+            <td><label for="confirmpass">Confirm Password: </label></td>
+            <td><input type="password" id="confirmpass" required onblur="validate7()"/></td>
+            <td id="error6"></td>
+          </tr>
+          <tr>
+            <td><input type="submit" value="REGISTER" /></td>
+            <td><input type="reset" /></td>
+          </tr>
+        </table>
+      </form>
+    </section>
+
+    <script src="./validate.js"></script>
+  </body>
+</html>

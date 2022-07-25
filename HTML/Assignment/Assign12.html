@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lot of things</title>
+</head>
+<body>
+  <section id="removeChild">
+  <h2>Remove child fun</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, assumenda.</p>
+  <button onclick="rmChild()">Remove Paragraph</button>
+  </section>
+
+  <section id="chkBox">
+    <h2>Select Languages</h2>
+    <div>
+      <label>Python:<input type="checkbox" name="chk1" id="ch1" value="Pyhton"></label>
+      <label>Java:<input type="checkbox" name="chk1" id="ch1" value="java"></label>
+      <label>C:<input type="checkbox" name="chk1" id="ch1" value="c"></label>
+      <label>.Net:<input type="checkbox" name="chk1" id="ch1" value="net"></label>
+    </div>
+    
+    
+  </section>
+
+  <script>
+    let secNode = document.getElementById('removeChild');
+    function rmChild() {secNode.removeChild(secNode.children[1])} 
+
+    //chkBox
+    let chkBox = document.getElementById('chkBox')
+    let chkArray = document.getElementsByName('chk1');
+    chkArray.forEach(ele=>{
+      ele.addEventListener('change',()=>{
+        let uoList = document.createElement('ul')
+        chkArray.forEach(ele=>{
+          if(ele.checked){
+            console.log(ele);
+
+            let liItem = document.createElement('li')
+            liItem.textContent = ele.value
+            uoList.append(liItem)
+
+          }
+        })
+        if(chkBox.children[2]){
+          chkBox.removeChild(chkBox.children[2])
+        }  
+        chkBox.append(uoList)
+        
+
+       })
+    })
+    
+  </script>
+
+
+</body>
+</html>
