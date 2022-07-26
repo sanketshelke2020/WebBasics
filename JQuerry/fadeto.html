@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hide Effect JQuerry</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $('#button').css('border',"1px solid blue")
+      $('button').mouseover(()=>{
+        
+        if($('button').text()==='Hide'){
+          $('button').text("Show")
+        }
+        else{
+          $('button').text("Hide")
+        }
+        
+        $('#image').animate({
+          height:'100px',width:'100px',backgroudColor:'#0dbd3c',border:'5px solid #0dbd3c'
+        },4000,'linear')
+      })
+    })
+  </script>
+</head>
+<body>
+  <img id="image" src="../HTML/Images/maria-teneva-UzQ5VR2FSfQ-unsplash.jpg" alt="Ocean" height="500px">
+  <br>
+  <button id="button">Hide</button>
+</body>
+</html>

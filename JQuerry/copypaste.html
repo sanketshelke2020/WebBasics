@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html text val</title>
+</head>
+<body>
+    
+    <p id="nation">
+        <b>India is my country <i>I love my india</i></b>
+    </p>
+    <button id="pastebutton">COPY PASTE</button>
+    <!-- paste innerhtml of above p in below div on button click-->
+    <div id="india"></div>
+     <!-- paste innertext of above p in below p on button click-->
+    <p id="country"></p>
+    <label>Enter your age</label><input type="number" id="age">
+    <!-- put double of value of above field in below field on keyup-->
+    <label>Double of age is : </label><input type="number" id="result">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!--minified-->
+    <script>
+        $(document).ready(function(){
+         $("#pastebutton").click(function(){
+            let contents=$("#nation").html();
+            $("#india").html(contents);
+            let textc=$("#nation").text();
+            $("#country").text(textc);
+         });
+         $("#age").keyup(function(){
+            let myAge=$("#age").val();
+            $("#result").val(myAge*2);
+         });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Start Chain</button>
+    <figure>
+        <img src="../HTML/Images/maria-teneva-UzQ5VR2FSfQ-unsplash.jpg" alt="sachin" height="200" width="300">
+        <img src="../HTML/Images/download.png" alt="rose" height="200" width="300">
+    </figure>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!--minified-->
+    <script>
+        $(document).ready(function(){
+           $('button').click(function(){
+             $('figure>img').fadeOut(1000).fadeIn(800).slideUp(1200).slideDown(900).hide(800).show(1000).toggle(1000)
+           });
+        });
+    </script>
+</body>
+</html>

@@ -7,13 +7,6 @@
     <title>Form Validation</title>
   </head>
 
-<style>
-  :valid{
-    border: 1px solid green;
-  }
-  :invalid{
-    border: 1px solid red;
-  }
 </style>
 
   <body>
@@ -26,25 +19,25 @@
           <tr>
             <td><label for="fname">First Name:</label></td>
             <td>
-              <input id="fname" name="myName" pattern="[A-Za-z]*" required onblur="validate1()"/>
+              <input id="fname" name="myName" pattern="[A-Za-z]*" required onblur="validate0()"/>
             </td>
             <td id="error0"></td>
           </tr>
           <tr>
             <td><label for="age">Age: </label></td>
-            <td><input type="number" id="age" onblur="validate2()"/></td>
+            <td><input type="number" id="age" onblur="validate1()"/></td>
             <td id="error1"></td>
           </tr>
           <tr>
             <td><label for="contact">Mobile Number: </label></td>
             <td>
-              <input id="contact" type="tel" onblur="validate3()"/>
+              <input id="contact" type="tel" onblur="validate2()"/>
             </td>
             <td id="error2"></td>
           </tr>
           <tr>
             <td><label for="mail">Email Id: </label></td>
-            <td><input type="email" id="mail" onblur="validate4()" /></td>
+            <td><input type="email" id="mail" onblur="validate3()" /></td>
             <td id="error3"></td>
           </tr>
           <tr>
@@ -54,7 +47,7 @@
                 type="text"
                 id="uname"
 
-                onblur="validate5()"
+                onblur="validate4()"
               />
             </td>
             <td id="error4"></td>
@@ -66,7 +59,7 @@
                 type="password"
                 id="pass"
                 pattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}"
-                onblur="validate6()"
+                onblur="validate5()"
               />
               <span class="showPass">(:)</span>
             </td>
@@ -74,7 +67,7 @@
           </tr>
           <tr>
             <td><label for="confirmpass">Confirm Password: </label></td>
-            <td><input type="password" id="confirmpass"  onblur="validate7()"/></td>
+            <td><input type="password" id="confirmpass"  onblur="validate6()"/></td>
             <td id="error6"></td>
           </tr>
           <tr>
@@ -84,15 +77,27 @@
         </table>
       </form>
     </section>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!--minified-->
-    <script src="./validate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-      $(document).ready(function(){
-        $('.showPass').mouseover(function(){
-          // console.log($('#pass').prop("type"))
-          $('#pass').attr('type',"text")
+
+      let err = []
+
+      for(let i =0;i<7;i++){
+        err[i] = `error${i}`
+      }
+      console.log(err);
+
+      $().ready(function(){
+        $("input").blur(function(){
+          let funName = $(this).attr('onblur')
+          let num = funName.slice(-3,-2)
+          $('#error'+num).html("<small>This field is required</small>")
+          
         })
+
       })
+
+
     </script>
   </body>
 </html>

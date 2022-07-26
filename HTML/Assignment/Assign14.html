@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Css Class</title>
+  <style>
+    .main{
+      text-align: center;
+      color: aquamarine;
+      background-color: grey;
+      padding: 50px;
+    }
+    .center{
+      width: 50%;
+      margin: auto;
+      margin-top: 30%;      
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <div class="main">
+      <h2>Welcome</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, doloribus debitis. Vero exercitationem tempore autem obcaecati itaque aut odit at harum animi, corrupti deserunt. Ab rem consequuntur totam, minima nisi excepturi eius. Eveniet pariatur explicabo, blanditiis ab harum ea quo?
+      </p>
+    </div>
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+
+      $().ready(function(){
+        $(".main").addClass("center")
+      })
+
+
+
+  </script>
+  
+
+</body>
+</html>
