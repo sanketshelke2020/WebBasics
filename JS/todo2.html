@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+</body>
+<script>
+    let compareArray=['vanilla','butterscotch','strawberry', 'mango','oreo','coconut'];
+    let flavours=['vanilla', 'butterscotch', 'strawberry','vanilla', 'mango', 
+    'oreo', 'coconut','butterscotch','mango'];
+    let serialNums=new Array(flavours.length);
+    let counter=1;
+    for(let i=0;i<compareArray.length;i++){
+        for(let j=0;j<flavours.length;j++){
+            if(flavours[i]===flavours[j])
+                serialNums[j]=counter;
+        }
+        // if(i==3) break;
+        counter++;
+    } 
+    console.log(flavours);
+    console.log(serialNums);
+
+
+    let tableNode=document.createElement('table');
+    tableNode.setAttribute('border','3');
+   
+    for(let i=0,j=0;i<flavours.length,j<serialNums.length;i++,j++){
+        let trNode=document.createElement('tr');
+        let tdNode2=document.createElement('td');
+        let tdNode1=document.createElement('td');
+        tdNode2.textContent=flavours[i];
+        tdNode1.textContent=serialNums[j];
+        trNode.append(tdNode1);
+        trNode.append(tdNode2);
+        tableNode.append(trNode);
+    }
+    document.body.append(tableNode);
+</script>
+</html>

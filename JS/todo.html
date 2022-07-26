@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let lang = ['Python', "Java", "C++", "Ruby","Go"]
+
+    let tableNode = document.createElement('table')
+    tableNode.setAttribute('border','3');
+
+    let trNode = document.createElement('tr')
+    let tdNode = document.createElement("td")
+    let i = 1;
+    lang.forEach(ele =>{
+      let trNode = document.createElement('tr')
+      let tdNode1 = document.createElement("td")
+      let tdNode2 = document.createElement("td")
+      
+      tdNode1.textContent = i+=2
+
+      trNode.append(tdNode1)
+      tdNode2.textContent = ele
+      trNode.append(tdNode2)
+      tableNode.append(trNode)
+
+    })
+
+    document.body.append(tableNode)
+
+    
+
+  </script>
+</body>
+</html>

@@ -19,7 +19,7 @@
   <body>
     <section>
       <h1>Registration Form</h1>
-      <form action="Success.html" novalidate>
+      <form action="Success.html" onsubmit="return validateForm()" novalidate>
         <!-- text field-->
 
         <table>
@@ -32,19 +32,19 @@
           </tr>
           <tr>
             <td><label for="age">Age: </label></td>
-            <td><input type="number" id="age" min="20" max="60" required onblur="validate2()"/></td>
+            <td><input type="number" id="age" onblur="validate2()"/></td>
             <td id="error1"></td>
           </tr>
           <tr>
             <td><label for="contact">Mobile Number: </label></td>
             <td>
-              <input id="contact" pattern="[0-9]{10}" required type="tel" onblur="validate3()"/>
+              <input id="contact" type="tel" onblur="validate3()"/>
             </td>
             <td id="error2"></td>
           </tr>
           <tr>
             <td><label for="mail">Email Id: </label></td>
-            <td><input type="email" id="mail" required onblur="validate4()" /></td>
+            <td><input type="email" id="mail" onblur="validate4()" /></td>
             <td id="error3"></td>
           </tr>
           <tr>
@@ -53,9 +53,7 @@
               <input
                 type="text"
                 id="uname"
-                minlength="3"
-                maxlength="10"
-                required
+
                 onblur="validate5()"
               />
             </td>
@@ -75,7 +73,7 @@
           </tr>
           <tr>
             <td><label for="confirmpass">Confirm Password: </label></td>
-            <td><input type="password" id="confirmpass" required onblur="validate7()"/></td>
+            <td><input type="password" id="confirmpass"  onblur="validate7()"/></td>
             <td id="error6"></td>
           </tr>
           <tr>
